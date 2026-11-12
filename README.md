@@ -6,31 +6,51 @@ This repository contains the design files and supporting documentation for the J
 
 | Folder | Contents |
 |---|---|
-| [CAD/Fusion360](CAD/Fusion360/) | Native Autodesk Fusion 360 design files (`.f3d`) |
-| [CAD/STEP](CAD/STEP/) | Neutral CAD exchange files (`.step`, `.stp`) |
-| [CAD/STL](CAD/STL/) | Mesh exports for prototyping and 3D printing (`.stl`) |
+| [CAD/Fusion360](CAD/Fusion360/) | Native Autodesk Fusion 360 designs, organized by study interfaces and research folders |
+| [CAD/STEP](CAD/STEP/) | STEP exports of the two official study interfaces |
+| [CAD/STL](CAD/STL/) | STL mesh files for Gripper components |
 | [Drawings](Drawings/) | Engineering drawings, dimensions and manufacturing details |
 | [Images](Images/) | Renders, assembly views and project photographs |
 | [Documentation](Documentation/) | Design notes, instructions and supporting technical documents |
 
-The folders are prepared for the CAD files and supporting materials, which will be added in a later update.
+## CAD folder structure
+
+```text
+CAD/
+├── Fusion360/
+│   ├── Official Study Interfaces/   # Two official designs in .f3d format
+│   └── Research & Development/       # Design iterations, source models and supporting files
+│       ├── Gripper/
+│       ├── Holster Designs/
+│       ├── Last Year Assets/
+│       ├── Online Attachment Models/
+│       ├── Palm Designs/
+│       └── Tool Designs/
+├── STEP/
+│   └── Official Study Interfaces/   # The same two official designs in .step format
+└── STL/
+    └── Research & Development/
+        └── Gripper/                 # Five mesh files
+```
+
+The two official study interfaces are **Insert & Twist Interface** and **Snap On Interface**. Each is available as a native Fusion 360 file and as a STEP file. The Research & Development folders retain the source project organization; the five Gripper STL assets are stored separately under CAD/STL.
 
 ## Getting started
 
-1. Open the relevant CAD or drawing folder.
+1. Open the relevant folder under `CAD`.
 2. Download the file you need.
-3. Open native Fusion 360 files in Autodesk Fusion 360. STEP files can be imported into most mainstream CAD applications. STL files are mesh exports intended primarily for fabrication workflows.
+3. Open `.f3d` files in Autodesk Fusion 360. STEP files can be imported into most mainstream CAD applications. STL files are mesh exports intended primarily for fabrication workflows.
 
 ## Existing project document
 
-The repository currently includes [Mhky_JacoSmartAttachment.pdf](Mhky_JacoSmartAttachment.pdf).
+The repository also includes [Mhky_JacoSmartAttachment.pdf](Mhky_JacoSmartAttachment.pdf).
 
 ## File conventions
 
 - Keep native Fusion 360 source files in `CAD/Fusion360/`.
-- Include STEP exports in `CAD/STEP/` for wider CAD compatibility.
-- Include STL exports in `CAD/STL/` where 3D-printable meshes are required.
-- Use descriptive filenames and, where practical, include revision identifiers (for example, `AttachmentInterface_v1.0.step`).
+- Keep STEP exchange files in `CAD/STEP/`.
+- Keep mesh exports in `CAD/STL/`.
+- Preserve the study interface and research subfolder structure when adding new files.
 
 ## Licence
 
